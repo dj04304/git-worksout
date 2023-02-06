@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/644e1d23ae.js" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <title>웍스아웃</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <link rel="stylesheet" href="/static/css/admin-list.css">
+ 
+</head>
+
+<body>
+    <div class="__next">
+        <div class="all-container">
+            <!-- 헤더부분 -->
+            <th:block th:replace="/fragment/header"></th:block>
+
+            <main class="main-container">
+                <div class="header-name">상품리스트</div>
+                <div class="main-div">
+                    <div class="admin-category">
+                        <div>
+                            <div class="admin-category-menu user-info">유저정보</div>
+                            <div class="admin-category-underbar-menu pd-list">상품리스트</div>
+                            <div class="admin-category-menu pd-insert">상품등록</div>
+                            <div class="admin-category-menu inquiry">문의게시글</div>
+                        </div>
+                    </div>
+                    <div class="admin-div">
+	                    <div class="notice-search">
+			                <select class="search-select hidden">
+			                    <option value="brand">브랜드</option>
+			                </select>
+			                <input type="text" class="search-input" id = "inputValue">
+			                <button type="button" class="search-button">수정하기</button>
+			            </div>
+	                    <div class="admin-contents">
+		                    <article>
+		                        <table>
+		                        	<thead>
+			                            <tr>
+			                                <th class = "pd-code-table">상품 코드</th>
+			                                <th>상품 브랜드</th>
+			                                <th>상품 종류</th>
+			                                <th>상품명</th>
+			                                <th>가격</th>
+			                                <th>수량</th>
+			                                <th>사이즈</th>
+			                                <th>젠더</th>
+			                                <th>image</th>
+			                                <th>삭제</th>
+			                            </tr>
+		                            </thead>
+		                            <tbody>
+			                            <tr>
+			                                <td>1</td>
+			                                <td>nike</td>
+			                                <td>shirt</td>
+			                                <td>fantastic bling bling shirt</td>
+			                                <td>45,000</td>
+			                                <td>40</td>
+			                                <td>L</td>
+			                                <td>m</td>
+			                                <td>link</td>
+			                                <td>
+			                                    <button type="button">삭제</button>
+			                                </td>
+			                            </tr>
+		                            </tbody>
+		                        </table>
+	                        </article>
+	                    </div>
+	                    <!-- <div class="list-footer">
+	                    	<div class="page-buttons">
+					            <button type="button" class="page-button pre">&lt;</button>
+					            <button type="button" class="page-button">1</button>
+					            <button type="button" class="page-button">2</button>
+					            <button type="button" class="page-button">3</button>
+					            <button type="button" class="page-button">4</button>
+					            <button type="button" class="page-button">5</button>
+					            <button type="button" class="page-button next">&gt;</button>
+					        </div>
+	                    </div>                     -->
+	                </div>
+					<div class="admin-content-update">
+						<!-- <div class="insert-items">
+							<input type="text" placeholder="product_brand" name="productBrand">
+							<input type="text" placeholder="product_kind" name="productKind">
+							<input type="text" placeholder="product_name" name="productName">
+							<input type="text" placeholder="product_info" name="productInfo">
+							<input type="text" placeholder="product_price" name="productPrice">
+							<input type="text" placeholder="product_amount" name="productAmount">
+							<input type="text" placeholder="product_size" name="productSize">
+							<input type="text" placeholder="product_gender" name="productGender">
+							<input type="file" class="product-file" name="file" multiple="multiple" accept=".jpg, .jpeg, .png, .gif">
+						</div> -->
+					</div>
+                </div>
+            </main>
+            
+            <!-- footer부분 -->
+            <th:block th:replace="/fragment/footer"></th:block>
+        </div>
+
+    </div>
+  <!-- <script src="/static/js/item-category-page.js"></script> -->
+    
+    <script src="/static/js/product/product-list.js"></script>
+	<script src="/static/js/product/product.js"></script>
+
+</body>
+
+</html>
